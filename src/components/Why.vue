@@ -38,7 +38,7 @@ const benefits = [
       </Badge>
 
       <!-- Title -->
-      <motion.h1
+      <!-- <motion.h1
         class="text-4xl md:text-6xl font-bold leading-tight"
         :initial="{ opacity: 0, y: -40 }"
         :animate="{ opacity: 1, y: 0 }"
@@ -50,7 +50,7 @@ const benefits = [
         >
           Build the Future.
         </span>
-      </motion.h1>
+      </motion.h1> -->
 
       <!-- Description -->
       <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
