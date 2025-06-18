@@ -47,7 +47,7 @@ import Separator from "./ui/separator/Separator.vue";
 
         <!-- Informações do Evento -->
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Informações do Evento</h3>
+          <h3 class="font-bold text-lg">Evento</h3>
           <a href="#" class="opacity-60 hover:opacity-100">Agenda</a>
           <a href="#" class="opacity-60 hover:opacity-100"
             >Regras e Diretrizes</a
