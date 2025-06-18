@@ -2,6 +2,13 @@ version: '3'
 services:
   vue:
     build: .
+    environment:
+      - VIRTUAL_HOST=amecctech.techsolutionslda.com
+    networks:
+      - proxy-network
     ports:
       - "8085:90"
     restart: unless-stopped
+networks:
+  proxy-network:
+    external: true
