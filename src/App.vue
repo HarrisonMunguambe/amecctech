@@ -64,7 +64,7 @@ function talkToAgent() {
   <Navbar />
   <Hero />
   <Sponsors />
-  <Benefits />
+  <!-- <Benefits />
   <Features />
   <Services />
   <HowItWorks />
@@ -75,7 +75,7 @@ function talkToAgent() {
   <Blog />
   <Contact />
   <Why />
-  <FAQ />
+  <FAQ /> -->
   <Footer />
 
   <!-- Chatbot icon button -->
@@ -119,7 +119,7 @@ function talkToAgent() {
     <main
       id="chat-body"
       class="p-4 flex-1 overflow-y-auto space-y-3 bg-gray-50"
-      style="min-height: 320px;"
+      style="min-height: 320px"
     >
       <template v-if="messages.length === 0">
         <p class="text-gray-400 italic text-center">
@@ -132,14 +132,18 @@ function talkToAgent() {
         :key="index"
         :class="[
           'max-w-[80%] p-2 rounded-lg',
-          msg.from === 'user' ? 'bg-blue-600 text-white self-end' : 'bg-gray-200 text-gray-800 self-start'
+          msg.from === 'user'
+            ? 'bg-blue-600 text-white self-end'
+            : 'bg-gray-200 text-gray-800 self-start',
         ]"
       >
         {{ msg.text }}
       </div>
     </main>
 
-    <footer class="p-3 border-t border-gray-300 bg-white flex flex-col gap-2 rounded-b-lg">
+    <footer
+      class="p-3 border-t border-gray-300 bg-white flex flex-col gap-2 rounded-b-lg"
+    >
       <form
         @submit.prevent="sendMessage"
         class="flex gap-2 items-center"
