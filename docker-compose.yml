@@ -4,10 +4,9 @@ services:
     build: .
     environment:
       - VIRTUAL_HOST=amecctech.techsolutionslda.com
+      - VIRTUAL_PORT=80
     networks:
       - proxy-network
-    ports:
-      - "8085:90"
     restart: unless-stopped
 networks:
   proxy-network:
