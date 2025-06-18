@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useColorMode } from "@vueuse/core";
+// import { useColorMode } from "@vueuse/core";
 // const mode = useColorMode();
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
 
-const bounceText = (text: string) => {
-  return text.split("").map((char, index) => ({
-    char,
-    delay: index * 0.1,
-  }));
-};
+// const bounceText = (text: string) => {
+//   return text.split("").map((char, index) => ({
+//     char,
+//     delay: index * 0.1,
+//   }));
+// };
 
 // const hackathonText = bounceText("AMECCTECH Hackathon");
 </script>

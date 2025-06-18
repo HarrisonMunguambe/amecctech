@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { motion } from "@motionone/vue";
+// import { motion } from "@motionone/vue";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
