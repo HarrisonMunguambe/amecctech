@@ -1,0 +1,117 @@
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+
+const days = ref(0);
+const hours = ref(0);
+const minutes = ref(0);
+const seconds = ref(0);
+
+const deadline = new Date("2025-08-30T09:00:00").getTime();
+
+const updateCountdown = () => {
+  const now = new Date().getTime();
+  const distance = deadline - now;
+
+  days.value = Math.floor(distance / (1000 * 60 * 60 * 24));
+  hours.value = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  minutes.value = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  seconds.value = Math.floor((distance % (1000 * 60)) / 1000);
+};
+
+onMounted(() => {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
+</script>
+
+<template>
+  <section
+    class="w-full min-h-screen bg-white dark:bg-[#121A29] flex items-center justify-center px-6 py-24 transition-colors duration-500"
+  >
+    <div class="max-w-4xl text-center space-y-10 text-gray-800 dark:text-white">
+      <!-- Emoji animado -->
+      <div class="text-6xl sm:text-7xl animate-bounce">🚀</div>
+
+      <!-- Título -->
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight"
+        :class="{ 'text-[#60A5FA]': true }"
+      >
+        Coming Soon
+      </h1>
+
+      <!-- Intro -->
+      <p class="text-lg sm:text-xl font-medium">
+        Estás preparado para te desafiar?
+      </p>
+
+      <p
+        class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mt-4 italic"
+      >
+        Fica atento às nossas redes sociais para não perder nenhuma novidade
+        sobre o
+        <span class="text-[#60A5FA] font-bold">AMECCTECH Hackathon</span>!
+      </p>
+
+      <!-- Contador -->
+      <div class="flex flex-wrap justify-center gap-6 pt-6">
+        <div
+          v-for="(value, label) in {
+            Dias: days,
+            Horas: hours,
+            Minutos: minutes,
+            Segungos: seconds,
+          }"
+          :key="label"
+          class="w-24 sm:w-28 h-24 sm:h-28 bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/20 rounded-xl flex flex-col items-center justify-center shadow-lg backdrop-blur-md transition-all duration-300"
+        >
+          <span
+            class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white"
+          >
+            {{ value }}
+          </span>
+          <span
+            class="text-xs sm:text-sm text-gray-500 dark:text-gray-300 uppercase tracking-wide"
+          >
+            {{ label }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Save the date -->
+      <div
+        class="mt-8 inline-block px-6 py-3 border border-blue-400 bg-blue-50 dark:bg-white/5 rounded-lg shadow-sm backdrop-blur-md"
+      >
+        <p
+          class="text-sm sm:text-base font-semibold text-blue-800 dark:text-white"
+        >
+          📅 Save the date:
+          <span class="text-[#60A5FA] font-bold">9 de Agosto de 2025</span> –
+          Cape Town
+          <img
+            src="https://flagcdn.com/w40/za.png"
+            alt="South Africa Flag"
+            class="inline-block w-6 h-4 ml-1 rounded-sm align-middle"
+          />
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+</style>

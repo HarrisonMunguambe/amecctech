@@ -17,6 +17,7 @@ import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
 import Blog from "./components/Blog.vue";
 import Why from "./components/Why.vue";
+import ComingSoon from "./components/ComingSoon.vue";
 import { nextTick } from "vue";
 
 const isChatOpen = ref(false);
@@ -63,8 +64,9 @@ function talkToAgent() {
 <template>
   <Navbar />
   <Hero />
-  <Sponsors />
-  <!-- <Benefits />
+  <ComingSoon />
+  <!-- <Sponsors />
+  <Benefits />
   <Features />
   <Services />
   <HowItWorks />
