@@ -81,24 +81,6 @@ function talkToAgent() {
   <Footer />
 
   <!-- Chatbot icon button -->
-  <button
-    @click="toggleChat"
-    aria-label="Toggle Chatbot"
-    class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-8 w-8"
-      viewBox="0 0 24 24"
-    >
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z" />
-    </svg>
-  </button>
 
   <!-- Chatbot window panel -->
   <div

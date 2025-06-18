@@ -14,53 +14,60 @@ import Separator from "./ui/separator/Separator.vue";
           <a href="#" class="flex font-bold items-center">
             <img
               src="/logo.jpg"
-              alt="AMECCTECH Logo"
+              alt="Logotipo AMECCTECH"
               class="w-9 h-9 mr-2 rounded-lg border"
             />
             <h3 class="text-2xl">AMECCTECH</h3>
           </a>
           <p class="mt-2 opacity-70 max-w-sm">
-            Cape Town’s premier hackathon event, bringing together innovators and developers to solve real-world problems.
+            O principal hackathon de Cape Town, reunindo inovadores e
+            programadores para resolver desafios do mundo real.
           </p>
         </div>
 
-        <!-- Organizers -->
+        <!-- Organizadores -->
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Organizers</h3>
+          <h3 class="font-bold text-lg">Organizadores</h3>
           <a
             href="https://www.amecc.org"
             class="opacity-60 hover:opacity-100"
             target="_blank"
-            >AMECC</a
           >
+            AMECC
+          </a>
           <a
             href="https://techsolutions.co.za"
             class="opacity-60 hover:opacity-100"
             target="_blank"
-            >Techsolutions</a
           >
+            Techsolutions
+          </a>
           <a href="#" class="opacity-60 hover:opacity-100">AMECCTECH.com</a>
         </div>
 
-        <!-- Event Info -->
+        <!-- Informações do Evento -->
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Event Info</h3>
-          <a href="#" class="opacity-60 hover:opacity-100">Schedule</a>
-          <a href="#" class="opacity-60 hover:opacity-100">Rules & Guidelines</a>
-          <a href="#" class="opacity-60 hover:opacity-100">FAQs</a>
+          <h3 class="font-bold text-lg">Informações do Evento</h3>
+          <a href="#" class="opacity-60 hover:opacity-100">Agenda</a>
+          <a href="#" class="opacity-60 hover:opacity-100"
+            >Regras e Diretrizes</a
+          >
+          <a href="#" class="opacity-60 hover:opacity-100"
+            >Perguntas Frequentes</a
+          >
         </div>
 
-        <!-- Support -->
+        <!-- Apoio -->
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Support</h3>
-          <a href="#" class="opacity-60 hover:opacity-100">Contact Us</a>
-          <a href="#" class="opacity-60 hover:opacity-100">Sponsorship</a>
-          <a href="#" class="opacity-60 hover:opacity-100">Volunteer</a>
+          <h3 class="font-bold text-lg">Apoio</h3>
+          <a href="#" class="opacity-60 hover:opacity-100">Fale Connosco</a>
+          <a href="#" class="opacity-60 hover:opacity-100">Patrocínio</a>
+          <a href="#" class="opacity-60 hover:opacity-100">Voluntariado</a>
         </div>
 
-        <!-- Social Media -->
+        <!-- Redes Sociais -->
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Social Media</h3>
+          <h3 class="font-bold text-lg">Redes Sociais</h3>
           <a
             href="https://www.linkedin.com/company/amecc/"
             class="opacity-60 hover:opacity-100"
@@ -85,10 +92,10 @@ import Separator from "./ui/separator/Separator.vue";
         </div>
       </div>
 
-      <!-- Separator and copyright -->
+      <!-- Separador e direitos -->
       <Separator class="my-6" />
       <section>
-        <h3>&copy; 2025 AMECCTECH Hackathon. All rights reserved.</h3>
+        <h3>&copy; 2025 AMECCTECH Hackathon. Todos os direitos reservados.</h3>
       </section>
     </div>
   </footer>

@@ -2,8 +2,8 @@
 import { ref, computed } from "vue";
 import { useColorMode } from "@vueuse/core";
 
-const mode = useColorMode(); 
-const currentMode = computed(() => mode.value); 
+const mode = useColorMode();
+const currentMode = computed(() => mode.value);
 
 import {
   NavigationMenu,
@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 import { Menu } from "lucide-vue-next";
-import GithubIcon from "@/icons/LinkedInIcon.vue";
+
 import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
@@ -40,32 +40,30 @@ interface FeatureProps {
 }
 
 const routeList: RouteProps[] = [
-  { href: "#depoimentos", label: "Mentors & Judges" },
+  { href: "#depoimentos", label: "Mentores & Jurados" },
   { href: "#equipa", label: "Equipa" },
   { href: "#contacto", label: "Contacto" },
-  { href: "/tncs.pdf", label: "Docs" },
 ];
 
 const featureList: FeatureProps[] = [
   {
-    title: "What",
+    title: "O que é?",
     description:
-      "A 48-hour hackathon hosted by TechSolutions and AMECC to promote inovation 2ojvnb43or",
+      "Um hackathon de 48 horas promovido pela TechSolutions e AMECC para fomentar inovação.",
   },
   {
-    title: "When & Where",
-    description:
-      "30th and 31st of August, in CAPE TOWN",
+    title: "Quando e onde?",
+    description: "30 e 31 de Agosto, na cidade de Cape Town.",
   },
   {
-    title: "Details",
+    title: "Detalhes",
     description:
-      "The doors for participantes close on the 4/39/9221. Make sure that you and your team have registred.",
+      "As inscrições encerram no dia 04/08/2025. Garante que a tua equipa esteja registada!",
   },
   {
-    title: "Help",
+    title: "Ajuda",
     description:
-      "Any concern, please do not hesitate to reach out to us, or use our built-in chatbot",
+      "Se tiveres dúvidas, entra em contacto ou usa o nosso chatbot integrado.",
   },
 ];
 
@@ -82,7 +80,7 @@ const isOpen = ref<boolean>(false);
   >
     <!-- Desktop Logo & Name -->
     <a href="/" class="font-bold text-lg flex items-center space-x-2">
-      <img src="/logo.jpg" alt="SyncTechX Logo" class="h-9 w-auto" />
+      <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-9 w-auto" />
       <span>AMECCTECH</span>
     </a>
 
@@ -103,7 +101,7 @@ const isOpen = ref<boolean>(false);
                 <a href="/" class="flex items-center space-x-2">
                   <img
                     src="/logo.jpg"
-                    alt="AMECCTECH Logo"
+                    alt="Logo AMECCTECH"
                     class="h-9 w-auto"
                   />
                   <span>AMECCTECH</span>
@@ -126,17 +124,16 @@ const isOpen = ref<boolean>(false);
             </div>
           </div>
 
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start space-y-2 px-4">
+          <SheetFooter
+            class="flex-col sm:flex-col justify-start items-start space-y-2 px-4"
+          >
             <Separator />
             <ToggleTheme />
-            <!-- Enter Button Mobile -->
-            <Button
-              as-child
-              variant="outline"
-              class="w-full mt-2"
-              @click="isOpen = false"
-            >
-              <a href="/login">Entrar</a>
+            <!-- Instagram Button (Mobile) -->
+            <Button as-child variant="outline" class="w-full mt-2">
+              <a href="https://www.instagram.com/amecc/" target="_blank">
+                <InstagramIcon class="size-5" />
+              </a>
             </Button>
           </SheetFooter>
         </SheetContent>
@@ -148,7 +145,7 @@ const isOpen = ref<boolean>(false);
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
-            Event
+            Evento
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
@@ -195,23 +192,20 @@ const isOpen = ref<boolean>(false);
       </NavigationMenuList>
     </NavigationMenu>
 
-    <!-- Desktop Toggle, Social & Enter -->
+    <!-- Desktop Theme Toggle & Instagram -->
     <div class="hidden lg:flex items-center space-x-2">
       <ToggleTheme />
-
-      <Button as-child size="sm" variant="ghost" aria-label="LinkedIn">
+      <Button as-child size="sm" variant="ghost" aria-label="Instagram">
         <a
-          href="https://www.linkedin.com/company/synctechx/"
+          href="https://www.instagram.com/amecc/"
           target="_blank"
-          aria-label="LinkedIn"
+          title="Instagram"
+          class="flex items-center justify-center"
         >
-          <GithubIcon class="size-5" />
+          <i
+            class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"
+          ></i>
         </a>
-      </Button>
-
-      <!-- Enter Button Desktop -->
-      <Button as-child size="sm" variant="outline" class="ml-2">
-        <a href="/login">Entrar</a>
       </Button>
     </div>
   </header>
