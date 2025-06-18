@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
+// const mode = useColorMode();
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ const bounceText = (text: string) => {
   }));
 };
 
-const hackathonText = bounceText("AMECCTECH Hackathon");
+// const hackathonText = bounceText("AMECCTECH Hackathon");
 </script>
 
 <template>
