@@ -3,7 +3,7 @@ services:
   vue:
     build: .
     environment:
-      - VIRTUAL_HOST=amecctech.techsolutionslda.com
+      - VIRTUAL_HOST=amecctech.com
       - VIRTUAL_PORT=80
     networks:
       - proxy-network
