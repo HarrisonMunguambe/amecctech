@@ -24,9 +24,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-
 import { Menu } from "lucide-vue-next";
-
 import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
@@ -75,12 +73,12 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': currentMode === 'light',
       'shadow-dark': currentMode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl mt-8 mx-auto border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
     <!-- Desktop Logo & Name -->
     <a href="/" class="font-bold text-lg flex items-center space-x-2">
-      <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-9 w-auto" />
+      <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-11 w-auto" />
       <span>AMECCTECH</span>
     </a>
 
@@ -129,10 +127,18 @@ const isOpen = ref<boolean>(false);
           >
             <Separator />
             <ToggleTheme />
+
             <!-- Instagram Button (Mobile) -->
             <Button as-child variant="outline" class="w-full mt-2">
-              <a href="https://www.instagram.com/amecc/" target="_blank">
-                <InstagramIcon class="size-5" />
+              <a
+                href="https://www.instagram.com/amecc/"
+                target="_blank"
+                title="Instagram"
+                class="flex items-center justify-center"
+              >
+                <i
+                  class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"
+                ></i>
               </a>
             </Button>
           </SheetFooter>
