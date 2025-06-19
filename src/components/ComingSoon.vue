@@ -88,7 +88,7 @@ onMounted(() => {
           class="text-sm sm:text-base font-semibold text-blue-800 dark:text-white"
         >
           📅 Save the date:
-          <span class="text-[#60A5FA] font-bold">9 de Agosto de 2025</span> –
+          <span class="text-[#60A5FA] font-bold">30 de Agosto de 2025</span> –
           Cape Town
           <img
             src="https://flagcdn.com/w40/za.png"
