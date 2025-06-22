@@ -24,7 +24,7 @@ services:
     environment:
       - VIRTUAL_HOST=amecctech.com,www.amecctech.com
       - LETSENCRYPT_HOST=amecctech.com,www.amecctech.com
-      - LETSENCRYPT_EMAIL=teu-email@seudominio.com
+      - LETSENCRYPT_EMAIL=teu-hhmocumbi@gmail.com
     networks:
       - proxy-network
 
