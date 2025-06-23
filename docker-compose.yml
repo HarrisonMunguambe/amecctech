@@ -1,30 +1,45 @@
-version: '3.8'
+version: '3'
 
 services:
-  letsencrypt:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/nginx/certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - proxy-network
+
+  nginx-proxy-letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
     container_name: nginx-proxy-letsencrypt
     restart: unless-stopped
     environment:
-      - DEFAULT_EMAIL=teu-email@seudominio.com
+      - DEFAULT_EMAIL=teu-email@exemplo.com
     volumes:
       - /etc/nginx/certs:/etc/nginx/certs
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      - nginx-proxy
     networks:
       - proxy-network
-    depends_on:
-      - vue
 
   vue:
     build: .
-    container_name: amecctech-vue
+    container_name: vue-app
     restart: unless-stopped
-    expose:
-      - "80"
     environment:
       - VIRTUAL_HOST=amecctech.com,www.amecctech.com
       - LETSENCRYPT_HOST=amecctech.com,www.amecctech.com
-      - LETSENCRYPT_EMAIL=teu-hhmocumbi@gmail.com
+      - LETSENCRYPT_EMAIL=hhmocumbi@gmail.com
+    expose:
+      - "80"
     networks:
       - proxy-network
 
