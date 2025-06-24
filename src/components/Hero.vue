@@ -82,7 +82,7 @@ import { ArrowRight } from "lucide-vue-next";
           class="px-8 py-3 border border-gray-500 dark:border-gray-400 text-gray-800 dark:text-white font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200"
         >
           <a
-            href="https://www.instagram.com/amecc/"
+            href="https://www.instagram.com/amecctech?igsh=Zjk2NWE3c2JhZjRh"
             target="_blank"
             class="flex items-center gap-2"
           >

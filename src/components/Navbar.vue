@@ -136,7 +136,7 @@ const isOpen = ref<boolean>(false);
             <ToggleTheme />
             <Button as-child variant="outline" class="w-full mt-2">
               <a
-                href="https://www.instagram.com/amecc/"
+                href="https://www.instagram.com/amecctech?igsh=Zjk2NWE3c2JhZjRh"
                 target="_blank"
                 title="Instagram"
                 class="flex items-center justify-center"
