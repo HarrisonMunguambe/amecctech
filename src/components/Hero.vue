@@ -21,72 +21,73 @@ import { ArrowRight } from "lucide-vue-next";
     <div
       class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
     >
-      <!-- Badge informativo -->
+      <!-- Info Badge -->
       <div class="text-center">
         <Badge
           variant="outline"
           class="text-sm py-2 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
         >
-          <span class="mr-2 font-semibold">🚀 Em breve</span>
-          <span>Participa no Hackathon AMECCTECH em Cape Town!</span>
+          <span class="mr-2 font-semibold"
+            >🚀 Young Leaders Lab Coming Soon |</span
+          >
+          <span>Join the AMECCTECH Hackathon in Cape Town!</span>
         </Badge>
       </div>
 
-      <!-- Título principal -->
+      <!-- Main Title -->
       <div
         class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold leading-tight"
       >
         <h1>
-          Desenvolve as tuas competências no
+          Boost your skills at the
           <span
             aria-label="AMECCTECH Hackathon"
             role="text"
             class="text-transparent bg-gradient-to-r from-blue-500 to-emerald-600 bg-clip-text inline-block ml-2"
           >
-            AMECCTECH Hackathon
+            Young Leaders Lab Hackathon AMECCTECH
           </span>
         </h1>
       </div>
 
-      <!-- Descrição -->
+      <!-- Description -->
       <p
         class="max-w-screen-sm mx-auto text-xl text-muted-foreground dark:text-gray-300 text-center"
       >
-        Organizado pela AMECC e Techsolutions, o AMECCTECH é um hackathon de 48
-        horas que reúne os jovens mais brilhantes em Cape Town para inovar e
-        criar soluções digitais com impacto.
+        Organized by AMECC and TechSolutions, the AMECCTECH Hackathon is a
+        48-hour event bringing together the brightest young minds in Cape Town
+        to innovate and create impactful digital solutions.
       </p>
 
-      <!-- Ações -->
+      <!-- Action Buttons -->
       <div
         class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
       >
-        <!-- Botão Principal -->
+        <!-- Primary Button -->
         <Button
           as-child
           class="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-full shadow-lg transform transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
         >
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center"
-          >
-            Saber mais
+          <a href="#coming-soon" class="flex items-center">
+            Learn More
             <ArrowRight
-              class="size-5 ml-2 transition-transform group-hover/arrow:translate-x-1"
+              class="size-5 ml-2 rotate-90 transition-transform group-hover/arrow:translate-y-1"
             />
           </a>
         </Button>
-
-        <!-- Botão Secundário -->
+        <!-- Botão Secundário com ícone do Font Awesome -->
         <Button
           as-child
           variant="outline"
           class="px-8 py-3 border border-gray-500 dark:border-gray-400 text-gray-800 dark:text-white font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200"
         >
-          <a href="https://www.instagram.com/amecc/" target="_blank">
-            Ver Instagram
+          <a
+            href="https://www.instagram.com/amecctech?igsh=Zjk2NWE3c2JhZjRh"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
+            <!-- <i class="fab fa-instagram text-xl"></i> -->
+            View Instagram
           </a>
         </Button>
       </div>
