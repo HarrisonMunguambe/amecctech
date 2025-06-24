@@ -52,10 +52,10 @@ onMounted(() => {
         class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mt-4 italic"
       >
         Get ready for an intensive 48-hour journey where your talent could play
-        a decisive role in advancing health technology in Mozambique,
+        a decisive role in advancing health technology
         <span class="text-[#60A5FA] font-bold"
-          >South Africa, and across the African continent</span
-        >!
+          >in Mozambique, South Africa, and across the African continent</span
+        >.
       </p>
 
       <!-- Contador -->
