@@ -30,6 +30,7 @@ import ToggleTheme from "./ToggleTheme.vue";
 interface RouteProps {
   href: string;
   label: string;
+  isCTA?: boolean;
 }
 
 interface FeatureProps {
@@ -38,30 +39,31 @@ interface FeatureProps {
 }
 
 const routeList: RouteProps[] = [
-  { href: "#depoimentos", label: "Mentores & Jurados" },
-  { href: "#equipa", label: "Equipa" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "#comming-soon", label: "Judges" },
+  { href: "#comming-soon", label: "Speakers" },
+  { href: "#comming-soon", label: "Mentors" },
+  { href: "#comming-soon", label: "Sponsors" },
+  { href: "#comming-soon", label: "Awards" },
+  { href: "#register", label: "Register", isCTA: true },
 ];
 
 const featureList: FeatureProps[] = [
   {
-    title: "O que é?",
-    description:
-      "Um hackathon de 48 horas promovido pela TechSolutions e AMECC para fomentar inovação.",
+    title: "What is it?",
+    description: "A 48-hour hackathon powered by TechSolutions and AMECC.",
   },
   {
-    title: "Quando e onde?",
-    description: "30 e 31 de Agosto, na cidade de Cape Town.",
+    title: "When and where?",
+    description: "30–31 August in the city of Cape Town.",
   },
   {
-    title: "Detalhes",
+    title: "Details",
     description:
-      "As inscrições encerram no dia 04/08/2025. Garante que a tua equipa esteja registada!",
+      "Registration closes on 4 August 2025. Make sure your team is signed up!",
   },
   {
-    title: "Ajuda",
-    description:
-      "Se tiveres dúvidas, entra em contacto ou usa o nosso chatbot integrado.",
+    title: "Need help?",
+    description: "If you have any questions, feel free to contact us.",
   },
 ];
 
@@ -76,13 +78,13 @@ const isOpen = ref<boolean>(false);
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl mt-8 mx-auto border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
-    <!-- Desktop Logo & Name -->
+    <!-- Logo -->
     <a href="/" class="font-bold text-lg flex items-center space-x-2">
       <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-11 w-auto" />
       <span>AMECCTECH</span>
     </a>
 
-    <!-- Mobile -->
+    <!-- Mobile Menu -->
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
@@ -109,11 +111,16 @@ const isOpen = ref<boolean>(false);
 
             <div class="flex flex-col gap-2">
               <Button
-                v-for="{ href, label } in routeList"
+                v-for="{ href, label, isCTA } in routeList"
                 :key="label"
                 as-child
-                variant="ghost"
-                class="justify-start text-base"
+                :variant="isCTA ? 'default' : 'ghost'"
+                :class="[
+                  'justify-start text-base',
+                  isCTA
+                    ? 'font-semibold px-4 py-2 rounded-lg shadow-md transition-all hover:scale-105'
+                    : '',
+                ]"
               >
                 <a @click="isOpen = false" :href="href">
                   {{ label }}
@@ -127,8 +134,6 @@ const isOpen = ref<boolean>(false);
           >
             <Separator />
             <ToggleTheme />
-
-            <!-- Instagram Button (Mobile) -->
             <Button as-child variant="outline" class="w-full mt-2">
               <a
                 href="https://www.instagram.com/amecc/"
@@ -151,7 +156,7 @@ const isOpen = ref<boolean>(false);
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
-            Evento
+            About
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
@@ -179,31 +184,32 @@ const isOpen = ref<boolean>(false);
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <div class="flex">
-              <Button
-                v-for="{ href, label } in routeList"
-                :key="label"
-                as-child
-                variant="ghost"
-                class="justify-start text-base"
-              >
-                <a :href="href">
-                  {{ label }}
-                </a>
-              </Button>
-            </div>
-          </NavigationMenuLink>
+          <div class="flex">
+            <Button
+              v-for="{ href, label, isCTA } in routeList"
+              :key="label"
+              as-child
+              :variant="isCTA ? 'ghost' : 'ghost'"
+              :class="[
+                'justify-start text-base mx-1',
+                isCTA
+                  ? 'bg-[#1E41B2] !text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#183695] transition-all hover:scale-105'
+                  : '',
+              ]"
+            >
+              <a :href="href">{{ label }}</a>
+            </Button>
+          </div>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
 
-    <!-- Desktop Theme Toggle & Instagram -->
+    <!-- Right Side -->
     <div class="hidden lg:flex items-center space-x-2">
       <ToggleTheme />
       <Button as-child size="sm" variant="ghost" aria-label="Instagram">
         <a
-          href="https://www.instagram.com/amecc/"
+          href="https://www.instagram.com/amecctech?igsh=Zjk2NWE3c2JhZjRh"
           target="_blank"
           title="Instagram"
           class="flex items-center justify-center"
@@ -221,7 +227,6 @@ const isOpen = ref<boolean>(false);
 .shadow-light {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
 }
-
 .shadow-dark {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
 }
