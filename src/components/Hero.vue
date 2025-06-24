@@ -27,7 +27,9 @@ import { ArrowRight } from "lucide-vue-next";
           variant="outline"
           class="text-sm py-2 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
         >
-          <span class="mr-2 font-semibold">🚀 Coming Soon</span>
+          <span class="mr-2 font-semibold"
+            >🚀 Young Leaders Lab Coming Soon |</span
+          >
           <span>Join the AMECCTECH Hackathon in Cape Town!</span>
         </Badge>
       </div>
@@ -43,7 +45,7 @@ import { ArrowRight } from "lucide-vue-next";
             role="text"
             class="text-transparent bg-gradient-to-r from-blue-500 to-emerald-600 bg-clip-text inline-block ml-2"
           >
-            AMECCTECH Hackathon
+            Young Leaders Lab Hackathon AMECCTECH
           </span>
         </h1>
       </div>
@@ -66,21 +68,25 @@ import { ArrowRight } from "lucide-vue-next";
           as-child
           class="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-full shadow-lg transform transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
         >
-          <a href="#comming-soon" class="flex items-center">
+          <a href="#coming-soon" class="flex items-center">
             Learn More
             <ArrowRight
               class="size-5 ml-2 rotate-90 transition-transform group-hover/arrow:translate-y-1"
             />
           </a>
         </Button>
-
-        <!-- Secondary Button -->
+        <!-- Botão Secundário com ícone do Font Awesome -->
         <Button
           as-child
           variant="outline"
           class="px-8 py-3 border border-gray-500 dark:border-gray-400 text-gray-800 dark:text-white font-semibold rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200"
         >
-          <a href="https://www.instagram.com/amecc/" target="_blank">
+          <a
+            href="https://www.instagram.com/amecc/"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
+            <!-- <i class="fab fa-instagram text-xl"></i> -->
             View Instagram
           </a>
         </Button>

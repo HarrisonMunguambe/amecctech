@@ -39,12 +39,12 @@ interface FeatureProps {
 }
 
 const routeList: RouteProps[] = [
-  { href: "#comming-soon", label: "Judges" },
-  { href: "#comming-soon", label: "Speakers" },
-  { href: "#comming-soon", label: "Mentors" },
-  { href: "#comming-soon", label: "Sponsors" },
-  { href: "#comming-soon", label: "Awards" },
-  { href: "#register", label: "Register", isCTA: true },
+  { href: "#coming-soon", label: "Judges" },
+  { href: "#coming-soon", label: "Speakers" },
+  { href: "#coming-soon", label: "Mentors" },
+  { href: "#coming-soon", label: "Sponsors" },
+  { href: "#coming-soon", label: "Awards" },
+  { href: "#coming-soon", label: "Register", isCTA: true },
 ];
 
 const featureList: FeatureProps[] = [

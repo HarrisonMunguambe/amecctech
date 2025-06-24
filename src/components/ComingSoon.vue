@@ -29,7 +29,7 @@ onMounted(() => {
 <template>
   <section
     class="w-full min-h-screen bg-white dark:bg-[#121A29] flex items-center justify-center px-6 py-24 transition-colors duration-500"
-    id="comming-soon"
+    id="coming-soon"
   >
     <div class="max-w-4xl text-center space-y-10 text-gray-800 dark:text-white">
       <!-- Emoji animado -->
@@ -45,25 +45,27 @@ onMounted(() => {
 
       <!-- Intro -->
       <p class="text-lg sm:text-xl font-medium">
-        Estás preparado para te desafiar?
+        Are you ready to challenge yourself?
       </p>
 
       <p
         class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mt-4 italic"
       >
-        Fica atento às nossas redes sociais para não perder nenhuma novidade
-        sobre o
-        <span class="text-[#60A5FA] font-bold">AMECCTECH Hackathon</span>!
+        Get ready for an intensive 48-hour journey where your talent could play
+        a decisive role in advancing health technology in Mozambique,
+        <span class="text-[#60A5FA] font-bold"
+          >South Africa, and across the African continent</span
+        >!
       </p>
 
       <!-- Contador -->
       <div class="flex flex-wrap justify-center gap-6 pt-6">
         <div
           v-for="(value, label) in {
-            Dias: days,
-            Horas: hours,
-            Minutos: minutes,
-            Segungos: seconds,
+            Days: days,
+            Hours: hours,
+            Minutes: minutes,
+            Seconds: seconds,
           }"
           :key="label"
           class="w-24 sm:w-28 h-24 sm:h-28 bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/20 rounded-xl flex flex-col items-center justify-center shadow-lg backdrop-blur-md transition-all duration-300"
@@ -82,6 +84,7 @@ onMounted(() => {
       </div>
 
       <!-- Save the date -->
+      <!-- Save the date -->
       <div
         class="mt-8 inline-block px-6 py-3 border border-blue-400 bg-blue-50 dark:bg-white/5 rounded-lg shadow-sm backdrop-blur-md"
       >
@@ -89,8 +92,8 @@ onMounted(() => {
           class="text-sm sm:text-base font-semibold text-blue-800 dark:text-white"
         >
           📅 Save the date:
-          <span class="text-[#60A5FA] font-bold">30 de Agosto de 2025</span> –
-          Cape Town
+          <span class="text-[#60A5FA] font-bold">30 August 2025</span> – Cape
+          Town
           <img
             src="https://flagcdn.com/w40/za.png"
             alt="South Africa Flag"
