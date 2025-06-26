@@ -28,7 +28,7 @@ onMounted(() => {
 
 <template>
   <section
-    class="w-full min-h-screen bg-white dark:bg-[#121A29] flex items-center justify-center px-6 py-24 transition-colors duration-500"
+    class="w-full min-h-screen bg-gray-100 dark:bg-[#121A29] flex items-center justify-center px-6 py-24 transition-colors duration-500"
     id="coming-soon"
   >
     <div class="max-w-4xl text-center space-y-10 text-gray-800 dark:text-white">

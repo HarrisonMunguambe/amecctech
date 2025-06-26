@@ -28,9 +28,9 @@ import { ArrowRight } from "lucide-vue-next";
           class="text-sm py-2 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400"
         >
           <span class="mr-2 font-semibold"
-            >🚀 Young Leaders Lab Coming Soon |</span
+            >🚀Join the Young Leaders Lab By AMECCTECH in Cape Town!</span
           >
-          <span>Join the AMECCTECH Hackathon in Cape Town!</span>
+          <span></span>
         </Badge>
       </div>
 
@@ -45,7 +45,7 @@ import { ArrowRight } from "lucide-vue-next";
             role="text"
             class="text-transparent bg-gradient-to-r from-blue-500 to-emerald-600 bg-clip-text inline-block ml-2"
           >
-            Young Leaders Lab Hackathon AMECCTECH
+            Young Leaders Lab By AMECCTECH
           </span>
         </h1>
       </div>
