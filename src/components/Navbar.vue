@@ -41,7 +41,7 @@ const routeList: RouteProps[] = [
   { href: "#coming-soon", label: "Judges" },
   { href: "#coming-soon", label: "Speakers" },
   { href: "#coming-soon", label: "Mentors" },
-  { href: "#coming-soonnnnn", label: "Sponsors" },
+  { href: "#coming-soon", label: "Sponsors" },
   { href: "#coming-soon", label: "Register", isCTA: true },
 ];
 
