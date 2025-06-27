@@ -42,7 +42,6 @@ const routeList: RouteProps[] = [
   { href: "#coming-soon", label: "Speakers" },
   { href: "#coming-soon", label: "Mentors" },
   { href: "#coming-soon", label: "Sponsors" },
-  { href: "#coming-soon", label: "Awards" },
   { href: "#coming-soon", label: "Register", isCTA: true },
 ];
 
@@ -57,7 +56,8 @@ const featureList: FeatureProps[] = [
   },
   {
     title: "Details",
-    description: "Registration closes on 4 August 2025. Make sure your team is signed up!",
+    description:
+      "Registration closes on 4 August 2025. Make sure your team is signed up!",
   },
   {
     title: "Need help?",
@@ -97,7 +97,11 @@ const isOpen = ref<boolean>(false);
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center space-x-2">
                 <a href="/" class="flex items-center space-x-2">
-                  <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-9 w-auto" />
+                  <img
+                    src="/logo.jpg"
+                    alt="Logo AMECCTECH"
+                    class="h-9 w-auto"
+                  />
                   <span>AMECCTECH</span>
                 </a>
               </SheetTitle>
@@ -109,14 +113,21 @@ const isOpen = ref<boolean>(false);
                 :key="label"
                 as-child
                 :variant="isCTA ? 'default' : 'ghost'"
-                :class="[ 'justify-start text-base', isCTA ? 'font-semibold px-4 py-2 rounded-lg shadow-md transition-all hover:scale-105' : '' ]"
+                :class="[
+                  'justify-start text-base',
+                  isCTA
+                    ? 'font-semibold px-4 py-2 rounded-lg shadow-md transition-all hover:scale-105'
+                    : '',
+                ]"
               >
                 <a @click="isOpen = false" :href="href">{{ label }}</a>
               </Button>
             </div>
           </div>
 
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start space-y-2 px-4">
+          <SheetFooter
+            class="flex-col sm:flex-col justify-start items-start space-y-2 px-4"
+          >
             <Separator />
             <ToggleTheme />
             <Button as-child variant="outline" class="w-full mt-2">
@@ -126,7 +137,9 @@ const isOpen = ref<boolean>(false);
                 title="Instagram"
                 class="flex items-center justify-center"
               >
-                <i class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"></i>
+                <i
+                  class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"
+                ></i>
               </a>
             </Button>
           </SheetFooter>
@@ -138,18 +151,28 @@ const isOpen = ref<boolean>(false);
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">About</NavigationMenuTrigger>
+          <NavigationMenuTrigger class="bg-card text-base"
+            >About</NavigationMenuTrigger
+          >
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img src="/logo.jpg" alt="AMECCTECH" class="h-full w-full rounded-md object-cover" />
+              <img
+                src="/logo.jpg"
+                alt="AMECCTECH"
+                class="h-full w-full rounded-md object-cover"
+              />
               <ul class="flex flex-col gap-2">
                 <li
                   v-for="{ title, description } in featureList"
                   :key="title"
                   class="rounded-md p-3 text-sm hover:bg-muted"
                 >
-                  <p class="mb-1 font-semibold leading-none text-foreground">{{ title }}</p>
-                  <p class="line-clamp-2 text-muted-foreground">{{ description }}</p>
+                  <p class="mb-1 font-semibold leading-none text-foreground">
+                    {{ title }}
+                  </p>
+                  <p class="line-clamp-2 text-muted-foreground">
+                    {{ description }}
+                  </p>
                 </li>
               </ul>
             </div>
@@ -163,7 +186,12 @@ const isOpen = ref<boolean>(false);
               :key="label"
               as-child
               variant="ghost"
-              :class="[ 'justify-start text-base mx-1', isCTA ? 'bg-[#1E41B2] !text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#183695] transition-all hover:scale-105' : '' ]"
+              :class="[
+                'justify-start text-base mx-1',
+                isCTA
+                  ? 'bg-[#1E41B2] !text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-[#183695] transition-all hover:scale-105'
+                  : '',
+              ]"
             >
               <a :href="href">{{ label }}</a>
             </Button>
@@ -182,7 +210,9 @@ const isOpen = ref<boolean>(false);
           title="Instagram"
           class="flex items-center justify-center"
         >
-          <i class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"></i>
+          <i
+            class="fab fa-instagram text-xl text-foreground hover:text-pink-500 transition-colors"
+          ></i>
         </a>
       </Button>
     </div>
