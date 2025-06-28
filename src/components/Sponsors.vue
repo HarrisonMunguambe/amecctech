@@ -12,89 +12,162 @@ import {
   Drama,
 } from "lucide-vue-next";
 
-interface sponsorsProps {
-  icon: string;
+interface Sponsor {
   name: string;
+  logo: string; // logo image path
+  url: string; // link to sponsor's site
 }
 
-// const sponsors: sponsorsProps[] = [
-//   {
-//     icon: "crown",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "vegan",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "ghost",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "puzzle",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "squirrel",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "cookie",
-//     name: "KinesisMz",
-//   },
-//   {
-//     icon: "drama",
-//     name: "KinesisMz",
-//   },
-// ];
-const sponsors: sponsorsProps[] = [
-  { icon: "puzzle", name: "StandardBank" },
-  { icon: "ghost", name: "NedBank" },
-  { icon: "cookie", name: "KPMG" },
-  { icon: "crown", name: "MISAU" },
-  { icon: "vegan", name: "AMECC" },
-  { icon: "squirrel", name: "TechSolutions" },
-  { icon: "drama", name: "StefanuttiStocks" },
+interface SponsorGroup {
+  tier: "Organizers" | "Gold" | "Silver" | "Bronze";
+  sponsors: Sponsor[];
+}
+
+const sponsorGroups: SponsorGroup[] = [
+  {
+    tier: "Organizers",
+    sponsors: [
+      {
+        name: "AMECC",
+        logo: "/amecc-logo.png",
+        url: "https://amecc.vercel.app",
+      },
+      {
+        name: "TechSolution",
+        logo: "/amecctech (1).png",
+        url: "https://techsolutions.co.mz",
+      },
+    ],
+  },
+  {
+    tier: "Gold",
+    sponsors: [
+      {
+        name: "StandardBank",
+        logo: "/amecctech (1).png",
+        url: "https://standardbank.com",
+      },
+      {
+        name: "KPMG",
+        logo: "/amecctech (1).png",
+        url: "https://kpmg.com",
+      },
+      {
+        name: "KPMG",
+        logo: "/amecctech (1).png",
+        url: "https://kpmg.com",
+      },
+      {
+        name: "KPMG",
+        logo: "/amecctech (1).png",
+        url: "https://kpmg.com",
+      },
+    ],
+  },
+  {
+    tier: "Silver",
+    sponsors: [
+      {
+        name: "MISAU",
+        logo: "/amecctech (1).png",
+        url: "https://misau.gov.mz",
+      },
+      {
+        name: "StefanuttiStocks",
+        logo: "/amecctech (1).png",
+        url: "https://stefanuttistocks.com",
+      },
+      {
+        name: "StefanuttiStocks",
+        logo: "/amecctech (1).png",
+        url: "https://stefanuttistocks.com",
+      },
+    ],
+  },
+  {
+    tier: "Bronze",
+    sponsors: [
+      {
+        name: "NedBank",
+        logo: "/amecctech (1).png",
+        url: "https://nedbank.co.za",
+      },
+      {
+        name: "TechSolutions",
+        logo: "/amecctech (1).png",
+        url: "https://techsolutions.com",
+      },
+      {
+        name: "SomeCompanyWithLogo",
+        logo: "/amecctech (1).png",
+        url: "https://somecompany.com",
+      },
+      {
+        name: "SomeCompanyWithLogo",
+        logo: "/amecctech (1).png",
+        url: "https://somecompany.com",
+      },
+      {
+        name: "SomeCompanyWithLogo",
+        logo: "/amecctech (1).png",
+        url: "https://somecompany.com",
+      },
+    ],
+  },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof Crown
-  | typeof Vegan
-  | typeof Ghost
-  | typeof Puzzle
-  | typeof Squirrel
-  | typeof Cookie
-  | typeof Drama
-> = {
-  crown: Crown,
-  vegan: Vegan,
-  ghost: Ghost,
-  puzzle: Puzzle,
-  squirrel: Squirrel,
-  cookie: Cookie,
-  drama: Drama,
+const tierColors: Record<string, string> = {
+  Organizers: "text-blue-600",
+  Gold: "text-yellow-500",
+  Silver: "text-gray-400",
+  Bronze: "text-amber-700",
 };
 </script>
 
 <template>
-  <section id="sponsors" class="max-w-[75%] mx-auto pb-24 sm:pb-32">
-    <h2 class="text-lg md:text-xl text-center mb-6">Sponsors & Partners</h2>
+  <section
+    id="sponsors"
+    class="w-full px-4 md:px-0 max-w-6xl mx-auto pb-24 sm:pb-32"
+  >
+    <h2 class="text-2xl md:text-3xl font-semibold text-center mb-12">
+      Sponsors & Partners
+    </h2>
 
-    <div class="mx-auto">
-      <Marquee
-        class="gap-[3rem]"
-        :pauseOnHover="true"
-        :fade="true"
-        innerClassName="gap-[3rem]"
+    <div class="space-y-20">
+      <div
+        v-for="{ tier, sponsors } in sponsorGroups"
+        :key="tier"
+        class="text-center"
       >
-        <div v-for="{ icon, name } in sponsors" :key="name">
-          <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component :is="iconMap[icon]" class="mr-2" stroke-width="3" />
-            {{ name }}
-          </div>
+        <h3
+          :class="[
+            'text-lg md:text-xl font-bold uppercase tracking-wide mb-6',
+            tierColors[tier],
+          ]"
+        >
+          {{ tier === "Organizers" ? tier : `${tier} Sponsors` }}
+        </h3>
+
+        <div class="flex flex-wrap justify-center gap-10">
+          <a
+            v-for="sponsor in sponsors"
+            :key="sponsor.name"
+            :href="sponsor.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center transition hover:scale-105"
+          >
+            <img
+              :src="sponsor.logo"
+              :alt="sponsor.name"
+              class="h-20 max-w-[80%] object-contain mb-2"
+            />
+            <span class="text-sm md:text-base text-gray-700 font-medium">
+              {{ sponsor.name }}
+            </span>
+          </a>
         </div>
-      </Marquee>
+      </div>
     </div>
   </section>
 </template>

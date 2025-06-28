@@ -33,20 +33,19 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "Do I need to form a team before joining?",
-    answer:
-      "No. You can register as an individual. There will be a team-forming session at the beginning of the event where you can connect with other participants.",
+    answer: "Yes. You ",
     value: "item-4",
   },
   {
     question: "What should I bring?",
     answer:
-      "Bring your laptop, charger, ID, and anything else you need to work comfortably (e.g., headphones, mouse, notepad). We’ll provide the rest!",
+      "We would advise you to bring a laptop, a notepad to take notes and learn from different speakers and mentors. Everything else will depend on your team and your roles. ",
     value: "item-5",
   },
   {
     question: "Will there be prizes?",
     answer:
-      "Absolutely! We have exciting prizes for the top teams, including tech gadgets, mentorship opportunities, and more surprises to be announced during the event.",
+      "Absolutely! We have exciting prizes for the top teams, big suprises for big achievers. Register now!",
     value: "item-6",
   },
 ];
@@ -77,9 +76,9 @@ const FAQList: FAQProps[] = [
     </Accordion>
 
     <h3 class="font-medium mt-4">
-      Ainda tem dúvidas?
+      Still have any questions?
       <a href="#" class="text-muted-foreground">
-        <a href="#" class="underline">Contate-nos</a>
+        <a href="#" class="underline">Contact-us</a>
       </a>
     </h3>
   </section>
