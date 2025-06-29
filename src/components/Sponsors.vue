@@ -14,8 +14,8 @@ import {
 
 interface Sponsor {
   name: string;
-  logo: string; // logo image path
-  url: string; // link to sponsor's site
+  logo: string;
+  url: string;
 }
 
 interface SponsorGroup {

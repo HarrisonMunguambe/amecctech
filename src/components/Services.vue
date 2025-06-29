@@ -19,7 +19,6 @@ interface ServiceProps {
   description: string;
 }
 
-// Tech Solutions services
 const techServices: ServiceProps[] = [
   {
     title: "Custom Software Development",
@@ -35,7 +34,6 @@ const techServices: ServiceProps[] = [
   },
 ];
 
-// AMECC specific services or programs
 const ameccServices: ServiceProps[] = [
   {
     title: "Student Mentorship Programs",
@@ -60,16 +58,16 @@ const ameccShortDesc =
 const ameccDescription =
   "AMECC is a dedicated institution focused on empowering the Mozambican student community abroad, fostering cultural integration, academic excellence, and social support through various programs and initiatives.";
 
-const techDescription ="Tech Solutions is a dynamic service provider committed to empowering businesses through tailored digital innovations, fostering operational efficiency, scalable growth, and seamless integration with modern technology platforms.";
+const techDescription =
+  "Tech Solutions is a dynamic service provider committed to empowering businesses through tailored digital innovations, fostering operational efficiency, scalable growth, and seamless integration with modern technology platforms.";
 
 const viewMoreTech = () => {
-  window.location.href = "https://techsolutions.co.mz"; // replace with your real Tech Solutions URL
+  window.location.href = "https://techsolutions.co.mz";
 };
 
 const viewMoreAmecc = () => {
-  window.location.href = "https://amecc.vercel.app"; // replace with your real AMECC URL
+  window.location.href = "https://amecc.vercel.app";
 };
-
 </script>
 
 <template>
@@ -78,18 +76,12 @@ const viewMoreAmecc = () => {
       Organization
     </h2>
 
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-12">
-      Who we are
-    </h2>
+    <h2 class="text-3xl md:text-4xl text-center font-bold mb-12">Who we are</h2>
 
-    <div
-      class="flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-7xl mx-auto"
-    >
-      <!-- Tech Solutions -->
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-7xl mx-auto">
       <div class="flex-1 flex flex-col">
         <h3 class="text-2xl font-semibold mb-6">Tech Solutions</h3>
 
-        <!-- Image + short description -->
         <img
           src="/tech.jpg"
           alt="Tech Solutions"
@@ -105,7 +97,7 @@ const viewMoreAmecc = () => {
 
         <div class="grid gap-6">
           <Card
-            v-for="({ title, description, pro }) in techServices"
+            v-for="{ title, description, pro } in techServices"
             :key="title"
             class="bg-muted/60 dark:bg-card h-full relative"
           >
@@ -130,23 +122,22 @@ const viewMoreAmecc = () => {
         </button>
       </div>
 
-      <!-- Vertical separator -->
       <div
         class="hidden lg:block border-l border-gray-300 dark:border-gray-700 mx-8"
         aria-hidden="true"
       ></div>
 
-      <!-- AMECC Description -->
       <div class="flex-1 flex flex-col justify-between">
         <h3 class="text-2xl font-semibold mb-6">AMECC</h3>
 
-        <!-- Image + short description -->
         <img
           src="/studs.jpg"
           alt="AMECC Community"
           class="w-full max-w-md mx-auto rounded-lg mb-4 object-cover aspect-[16/9]"
         />
-        <p class="text-muted-foreground mb-8 text-center max-w-md mx-auto leading-relaxed">
+        <p
+          class="text-muted-foreground mb-8 text-center max-w-md mx-auto leading-relaxed"
+        >
           {{ ameccShortDesc }}
         </p>
 
@@ -156,7 +147,7 @@ const viewMoreAmecc = () => {
 
         <div class="grid gap-6">
           <Card
-            v-for="({ title, description, pro }) in ameccServices"
+            v-for="{ title, description, pro } in ameccServices"
             :key="title"
             class="bg-muted/60 dark:bg-card h-full relative"
           >

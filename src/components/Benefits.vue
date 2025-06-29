@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Card, } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 import {
   Users2,
@@ -28,17 +28,20 @@ const hackathonInfo = {
     {
       icon: "users2",
       title: "Grupos",
-      description: "10 grupos de 3 a 5 participantes a trabalhar numa solução inovadora.",
+      description:
+        "10 grupos de 3 a 5 participantes a trabalhar numa solução inovadora.",
     },
     {
       icon: "userCheck",
       title: "Mentoria",
-      description: "Mentoria especializada com profissionais presentes no evento.",
+      description:
+        "Mentoria especializada com profissionais presentes no evento.",
     },
     {
       icon: "clock",
       title: "Apresentação",
-      description: "15 minutos para defesa da ideia perante um júri de especialistas.",
+      description:
+        "15 minutos para defesa da ideia perante um júri de especialistas.",
     },
     {
       icon: "mapPin",
@@ -69,7 +72,6 @@ const hackathonInfo = {
     id="hackathon"
     class="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-24 px-6 sm:px-12 md:px-20"
   >
-    <!-- Header -->
     <div class="max-w-4xl mx-auto text-center mb-20">
       <h1
         class="text-5xl sm:text-6xl font-extrabold text-blue-700 dark:text-blue-400 mb-4 leading-tight drop-shadow-sm"
@@ -88,7 +90,6 @@ const hackathonInfo = {
       </p>
     </div>
 
-    <!-- Details grid -->
     <div
       class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-20"
     >
@@ -101,7 +102,9 @@ const hackathonInfo = {
           :is="iconMap[detail.icon]"
           class="text-blue-600 dark:text-blue-400 w-16 h-16 mb-5 drop-shadow"
         />
-        <h3 class="text-2xl font-semibold mb-3 text-blue-800 dark:text-blue-300">
+        <h3
+          class="text-2xl font-semibold mb-3 text-blue-800 dark:text-blue-300"
+        >
           {{ detail.title }}
         </h3>
         <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
@@ -110,13 +113,15 @@ const hackathonInfo = {
       </Card>
     </div>
 
-    <!-- Call to action -->
-    <div class="max-w-3xl mx-auto text-center border-t border-blue-300 dark:border-blue-700 pt-16">
+    <div
+      class="max-w-3xl mx-auto text-center border-t border-blue-300 dark:border-blue-700 pt-16"
+    >
       <p
         class="text-gray-700 dark:text-gray-300 text-lg sm:text-xl leading-relaxed max-w-xl mx-auto"
       >
-        As vagas são limitadas para garantir qualidade e atenção personalizada a cada grupo.
-        Não percas a oportunidade de fazer parte de uma experiência que pode transformar o teu futuro.
+        As vagas são limitadas para garantir qualidade e atenção personalizada a
+        cada grupo. Não percas a oportunidade de fazer parte de uma experiência
+        que pode transformar o teu futuro.
       </p>
       <button
         type="button"
@@ -129,7 +134,6 @@ const hackathonInfo = {
 </template>
 
 <style scoped>
-/* Smooth card hover scaling */
 .card-hover-scale:hover {
   transform: scale(1.05);
   transition: transform 0.25s ease;

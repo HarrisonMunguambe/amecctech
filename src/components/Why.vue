@@ -40,7 +40,6 @@ const cards = [
     <div
       class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 px-4 items-start"
     >
-      <!-- Text Section -->
       <div>
         <p class="text-sm uppercase font-bold text-blue-600 tracking-wide">
           Why You Can’t Miss This
@@ -73,7 +72,6 @@ const cards = [
         </div>
       </div>
 
-      <!-- Flip Cards -->
       <div class="space-y-6">
         <div
           v-for="(card, index) in cards"
@@ -84,7 +82,6 @@ const cards = [
           "
         >
           <div class="flipper" :class="{ flipped: flippedCard === index }">
-            <!-- Front -->
             <div class="card-front" :class="card.bg">
               <div
                 class="p-6 rounded-xl shadow-lg text-white flex flex-col gap-4 h-full justify-center"
@@ -100,7 +97,6 @@ const cards = [
               </div>
             </div>
 
-            <!-- Back -->
             <div
               class="card-back bg-white border rounded-xl shadow-lg p-6 flex flex-col gap-4 justify-center"
             >

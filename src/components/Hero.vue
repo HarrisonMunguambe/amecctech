@@ -21,7 +21,6 @@ import { ArrowRight } from "lucide-vue-next";
     <div
       class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
     >
-      <!-- Info Badge -->
       <div class="text-center">
         <Badge
           variant="outline"
@@ -34,7 +33,6 @@ import { ArrowRight } from "lucide-vue-next";
         </Badge>
       </div>
 
-      <!-- Main Title -->
       <div
         class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold leading-tight"
       >
@@ -50,7 +48,6 @@ import { ArrowRight } from "lucide-vue-next";
         </h1>
       </div>
 
-      <!-- Description -->
       <p
         class="max-w-screen-sm mx-auto text-xl text-muted-foreground dark:text-gray-300 text-center"
       >
@@ -59,11 +56,9 @@ import { ArrowRight } from "lucide-vue-next";
         to innovate and create impactful digital solutions.
       </p>
 
-      <!-- Action Buttons -->
       <div
         class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
       >
-        <!-- Primary Button -->
         <Button
           as-child
           class="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-full shadow-lg transform transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
@@ -75,7 +70,6 @@ import { ArrowRight } from "lucide-vue-next";
             />
           </a>
         </Button>
-        <!-- Botão Secundário com ícone do Font Awesome -->
         <Button
           as-child
           variant="outline"
@@ -86,7 +80,6 @@ import { ArrowRight } from "lucide-vue-next";
             target="_blank"
             class="flex items-center gap-2"
           >
-            <!-- <i class="fab fa-instagram text-xl"></i> -->
             View Instagram
           </a>
         </Button>

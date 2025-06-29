@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen py-12 px-4 sm:px-8 relative overflow-hidden">
-    <!-- Confetti canvas -->
     <canvas
       ref="confettiCanvas"
       class="absolute inset-0 pointer-events-none z-10"
@@ -13,7 +12,6 @@
     </h1>
 
     <div class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto relative z-20">
-      <!-- 2nd Place -->
       <div
         class="bg-gray-100 dark:bg-zinc-900 rounded-2xl p-8 text-center border border-gray-300 dark:border-zinc-700 shadow-sm hover:shadow-md transition"
       >
@@ -30,7 +28,6 @@
         </ul>
       </div>
 
-      <!-- 1st Place - Highlighted -->
       <div
         class="bg-yellow-400 text-black rounded-3xl p-10 text-center shadow-2xl transform scale-105 border-4 border-yellow-300 hover:scale-110 transition-transform duration-300"
       >
@@ -49,7 +46,6 @@
         </ul>
       </div>
 
-      <!-- 3rd Place -->
       <div
         class="bg-gray-100 dark:bg-zinc-900 rounded-2xl p-8 text-center border border-gray-300 dark:border-zinc-700 shadow-sm hover:shadow-md transition"
       >
@@ -93,7 +89,6 @@ onMounted(() => {
     useWorker: true,
   });
 
-  // Function to generate random positions across the screen
   const shoot = () => {
     myConfetti({
       particleCount: 5,
@@ -106,10 +101,8 @@ onMounted(() => {
     });
   };
 
-  // Start confetti rain
   const interval = setInterval(shoot, 100);
 
-  // Stop after 5 seconds
   setTimeout(() => {
     clearInterval(interval);
   }, 5000);

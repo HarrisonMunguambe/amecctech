@@ -16,7 +16,6 @@ const event = {
 <template>
   <section class="container py-24 md:py-36">
     <div class="max-w-screen-xl mx-auto px-4 space-y-16">
-      <!-- Section Header -->
       <div class="text-center space-y-4">
         <span
           class="inline-block text-sm font-medium uppercase tracking-wide text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-400 px-3 py-1 rounded-full"
@@ -32,9 +31,7 @@ const event = {
         </p>
       </div>
 
-      <!-- Content Grid -->
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Image Gallery (Collage Style) -->
         <div class="grid grid-cols-2 gap-4">
           <img
             :src="event.images[0]"
@@ -53,7 +50,6 @@ const event = {
           />
         </div>
 
-        <!-- Description + Highlights -->
         <div class="space-y-6">
           <p class="text-base text-muted-foreground leading-relaxed">
             {{ event.description }}
@@ -79,7 +75,6 @@ const event = {
             </li>
           </ul>
 
-          <!-- View More Button -->
           <div class="pt-6">
             <a
               href="https://hackathonaemotech.com/?fbclid=PAZXh0bgNhZW0CMTEAAac17vvHsB1RWLcce8seL0zOOzgNv2gFHzc0S69qpB_775E3P69fW7shj0oWYA_aem_5U4504KBNEYEwX303r2wew#"

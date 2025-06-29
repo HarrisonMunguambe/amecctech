@@ -32,10 +32,8 @@ onMounted(() => {
     id="coming-soon"
   >
     <div class="max-w-4xl text-center space-y-10 text-gray-800 dark:text-white">
-      <!-- Emoji animado -->
       <div class="text-6xl sm:text-7xl animate-bounce">🚀</div>
 
-      <!-- Título -->
       <h1
         class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight"
         :class="{ 'text-[#60A5FA]': true }"
@@ -43,7 +41,6 @@ onMounted(() => {
         Coming Soon
       </h1>
 
-      <!-- Intro -->
       <p class="text-lg sm:text-xl font-medium">
         Are you ready to challenge yourself?
       </p>
@@ -58,7 +55,6 @@ onMounted(() => {
         >.
       </p>
 
-      <!-- Contador -->
       <div class="flex flex-wrap justify-center gap-6 pt-6">
         <div
           v-for="(value, label) in {
@@ -83,8 +79,6 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- Save the date -->
-      <!-- Save the date -->
       <div
         class="mt-8 inline-block px-6 py-3 border border-blue-400 bg-blue-50 dark:bg-white/5 rounded-lg shadow-sm backdrop-blur-md"
       >

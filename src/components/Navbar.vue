@@ -76,13 +76,11 @@ const isOpen = ref<boolean>(false);
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl mt-8 mx-auto border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
-    <!-- Logo -->
     <a href="/" class="font-bold text-lg flex items-center space-x-2">
       <img src="/logo.jpg" alt="Logo AMECCTECH" class="h-11 w-auto" />
       <span>AMECCTECH</span>
     </a>
 
-    <!-- Mobile Menu -->
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
@@ -147,7 +145,6 @@ const isOpen = ref<boolean>(false);
       </Sheet>
     </div>
 
-    <!-- Desktop Navigation -->
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -200,7 +197,6 @@ const isOpen = ref<boolean>(false);
       </NavigationMenuList>
     </NavigationMenu>
 
-    <!-- Right Side -->
     <div class="hidden lg:flex items-center space-x-2">
       <ToggleTheme />
       <Button as-child size="sm" variant="ghost" aria-label="Instagram">

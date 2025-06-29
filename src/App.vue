@@ -3,19 +3,19 @@ import { ref } from "vue";
 
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
-import Benefits from "./components/Benefits.vue";
+// import Benefits from "./components/Benefits.vue";
 import Features from "./components/Features.vue";
 import Services from "./components/Services.vue";
-import HowItWorks from "./components/HowItWorks.vue";
+//import HowItWorks from "./components/HowItWorks.vue";
 import Sponsors from "./components/Sponsors.vue";
 import Testimonials from "./components/Testimonials.vue";
 import Team from "./components/Team.vue";
 import Pricing from "./components/Pricing.vue";
-import Community from "./components/Community.vue";
+//import Community from "./components/Community.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
-import Blog from "./components/Blog.vue";
+//import Blog from "./components/Blog.vue";
 import LastEvent from "./components/LastEvent.vue";
 import Why from "./components/Why.vue";
 //import ComingSoon from "./components/ComingSoon.vue";
@@ -36,7 +36,6 @@ function sendMessage() {
   messages.value.push({ from: "user", text: msg });
   inputMessage.value = "";
 
-  // Simulate bot response after a short delay
   setTimeout(() => {
     messages.value.push({
       from: "bot",
@@ -58,7 +57,6 @@ function scrollToBottom() {
 
 function talkToAgent() {
   alert("Connecting to a human agent...");
-  // Here you would implement your live agent connection
 }
 </script>
 
@@ -67,15 +65,15 @@ function talkToAgent() {
   <Hero />
   <!-- <ComingSoon /> -->
 
-  <Benefits />
+  <!-- <Benefits />-->
   <Features />
   <Services />
-  <HowItWorks />
+  <!-- <HowItWorks /> -->
   <Testimonials />
   <Team />
-  <Community />
+  <!-- <Community /> -->
   <Pricing />
-  <Blog />
+  <!-- <Blog /> -->
   <Contact />
   <FAQ />
   <Sponsors />
@@ -83,9 +81,6 @@ function talkToAgent() {
   <LastEvent />
   <Footer />
 
-  <!-- Chatbot icon button -->
-
-  <!-- Chatbot window panel -->
   <div
     v-if="isChatOpen"
     class="fixed bottom-20 right-6 z-50 w-96 max-w-full rounded-lg bg-white shadow-xl border border-gray-300 flex flex-col"
@@ -162,7 +157,6 @@ function talkToAgent() {
 </template>
 
 <style scoped>
-/* Scrollbar for chat body */
 #chat-body::-webkit-scrollbar {
   width: 8px;
 }

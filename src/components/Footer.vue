@@ -5,11 +5,9 @@ import Separator from "./ui/separator/Separator.vue";
 <template>
   <footer id="footer" class="container py-24 pb-16 sm:py-32 sm:pb-24">
     <div class="p-10 bg-muted/50 dark:bg-card border rounded-2xl">
-      <!-- Layout grid -->
       <div
         class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
       >
-        <!-- Logo -->
         <div class="col-span-full xl:col-span-2">
           <a href="#" class="flex font-bold items-center">
             <img
@@ -26,7 +24,6 @@ import Separator from "./ui/separator/Separator.vue";
           </p>
         </div>
 
-        <!-- Organizers -->
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Organizers</h3>
           <a
@@ -45,7 +42,6 @@ import Separator from "./ui/separator/Separator.vue";
           </a>
         </div>
 
-        <!-- Event Info -->
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Event</h3>
           <a href="#coming-soon" class="opacity-60 hover:opacity-100"
@@ -57,7 +53,6 @@ import Separator from "./ui/separator/Separator.vue";
           <a href="#coming-soon" class="opacity-60 hover:opacity-100">FAQ</a>
         </div>
 
-        <!-- Support -->
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Support</h3>
           <a href="#coming-soon" class="opacity-60 hover:opacity-100"
@@ -71,7 +66,6 @@ import Separator from "./ui/separator/Separator.vue";
           >
         </div>
 
-        <!-- Social Media -->
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Social Media</h3>
           <a
@@ -98,7 +92,6 @@ import Separator from "./ui/separator/Separator.vue";
         </div>
       </div>
 
-      <!-- Separator and rights -->
       <Separator class="my-6" />
       <section>
         <h3>&copy; 2025 AMECCTECH Hackathon. All rights reserved.</h3>

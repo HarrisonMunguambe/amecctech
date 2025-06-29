@@ -18,7 +18,6 @@ import { AlertCircle, Building2, Phone, Mail, Clock } from "lucide-vue-next";
 
 const formType = ref<"participant" | "viewer">("participant");
 
-// Participant form state
 const contactForm = reactive({
   firstName: "",
   lastName: "",
@@ -27,7 +26,7 @@ const contactForm = reactive({
   teamName: "",
   subject: "Web Development",
   message: "",
-  teamMembers: [{ name: "", email: "" }], // ✅ only this definition
+  teamMembers: [{ name: "", email: "" }],
 });
 
 const addTeamMember = () => {
@@ -40,7 +39,6 @@ const removeTeamMember = (index: number) => {
   }
 };
 
-// Viewer form state
 const viewerForm = reactive({
   fullName: "",
   email: "",
@@ -85,7 +83,6 @@ const handleSubmit = () => {
 <template>
   <section id="contact" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Contact Info -->
       <div>
         <div class="mb-4">
           <h2 class="text-lg text-blue-500 mb-2 tracking-wider">
@@ -138,7 +135,6 @@ const handleSubmit = () => {
           </div>
         </div>
 
-        <!-- Steps to Registration -->
         <div class="mt-12">
           <h3 class="text-xl font-semibold mb-4 text-blue-600">
             How to Register
@@ -184,7 +180,6 @@ const handleSubmit = () => {
         </div>
       </div>
 
-      <!-- Form -->
       <Card class="bg-muted/60 dark:bg-card">
         <CardHeader>
           <div class="mb-4 text-lg font-semibold">Registration Type</div>
@@ -344,7 +339,6 @@ const handleSubmit = () => {
               </div>
             </template>
 
-            <!-- VIEWER FORM -->
             <template v-else>
               <div class="flex flex-col gap-1.5">
                 <Label for="viewer-name">Full Name</Label>

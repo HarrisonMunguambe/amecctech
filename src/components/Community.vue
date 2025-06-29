@@ -18,7 +18,6 @@ const subscribe = () => {
     return;
   }
 
-  // Aqui você pode fazer uma chamada para backend ou API
   alert(`Subscrito com sucesso: ${email.value}`);
   email.value = "";
 };
@@ -45,8 +44,8 @@ const subscribe = () => {
           </CardHeader>
 
           <CardContent class="lg:w-[80%] text-xl text-muted-foreground">
-            Fique atualizado com as nossas últimas novidades e dicas
-            exclusivas. Subscreva agora e não perca nada! 📩
+            Fique atualizado com as nossas últimas novidades e dicas exclusivas.
+            Subscreva agora e não perca nada! 📩
           </CardContent>
 
           <CardFooter
