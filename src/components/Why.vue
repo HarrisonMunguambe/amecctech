@@ -94,6 +94,9 @@ const cards = [
                 <p class="text-base leading-relaxed text-white/90">
                   {{ card.description }}
                 </p>
+                <span class="text-xs text-gray-400 mt-4"
+                  >(Tap again to flip)</span
+                >
               </div>
             </div>
 

@@ -3,22 +3,22 @@ import { ref } from "vue";
 
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
-// import Benefits from "./components/Benefits.vue";
-// import Features from "./components/Features.vue";
-// import Services from "./components/Services.vue";
-// import HowItWorks from "./components/HowItWorks.vue";
+import Benefits from "./components/Benefits.vue";
+import Features from "./components/Features.vue";
+import Services from "./components/Services.vue";
+import HowItWorks from "./components/HowItWorks.vue";
 import Sponsors from "./components/Sponsors.vue";
-// import Testimonials from "./components/Testimonials.vue";
-// import Team from "./components/Team.vue";
-// import Pricing from "./components/Pricing.vue";
-// import Community from "./components/Community.vue";
+import Testimonials from "./components/Testimonials.vue";
+import Team from "./components/Team.vue";
+import Pricing from "./components/Pricing.vue";
+import Community from "./components/Community.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
-//import Blog from "./components/Blog.vue";
+import Blog from "./components/Blog.vue";
 import LastEvent from "./components/LastEvent.vue";
 import Why from "./components/Why.vue";
-import ComingSoon from "./components/ComingSoon.vue";
+//import ComingSoon from "./components/ComingSoon.vue";
 import { nextTick } from "vue";
 
 const isChatOpen = ref(false);
@@ -65,9 +65,9 @@ function talkToAgent() {
 <template>
   <Navbar />
   <Hero />
-  <ComingSoon />
+  <!-- <ComingSoon /> -->
 
-  <!-- <Benefits />
+  <Benefits />
   <Features />
   <Services />
   <HowItWorks />
@@ -75,7 +75,7 @@ function talkToAgent() {
   <Team />
   <Community />
   <Pricing />
-  <Blog />-->
+  <Blog />
   <Contact />
   <FAQ />
   <Sponsors />

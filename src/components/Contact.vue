@@ -25,10 +25,20 @@ const contactForm = reactive({
   email: "",
   phone: "",
   teamName: "",
-  teamMembers: "",
   subject: "Web Development",
   message: "",
+  teamMembers: [{ name: "", email: "" }], // ✅ only this definition
 });
+
+const addTeamMember = () => {
+  contactForm.teamMembers.push({ name: "", email: "" });
+};
+
+const removeTeamMember = (index: number) => {
+  if (contactForm.teamMembers.length > 1) {
+    contactForm.teamMembers.splice(index, 1);
+  }
+};
 
 // Viewer form state
 const viewerForm = reactive({
@@ -54,7 +64,15 @@ const handleSubmit = () => {
       message,
     } = contactForm;
 
-    const mailToLink = `mailto:nilton.novele@gmail.com?subject=${subject}&body=Hello, I’m ${firstName} ${lastName} (${email}, ${phone}).\n\nTeam Name: ${teamName}\nMembers: ${teamMembers}\n\n${message}`;
+    const membersFormatted = teamMembers
+      .map((member, i) => `Member ${i + 1}: ${member.name} (${member.email})`)
+      .join("\n");
+
+    const mailToLink = `mailto:nilton.novele@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Hello, I’m ${firstName} ${lastName} (${email}, ${phone}).\n\nTeam Name: ${teamName}\n${membersFormatted}\n\n${message}`
+    )}`;
     window.location.href = mailToLink;
   } else {
     const { fullName, email } = viewerForm;
@@ -118,6 +136,51 @@ const handleSubmit = () => {
               <div>08:00 - 16:00</div>
             </div>
           </div>
+        </div>
+
+        <!-- Steps to Registration -->
+        <div class="mt-12">
+          <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            How to Register
+          </h3>
+          <ul class="border-l-2 border-blue-600 pl-6 space-y-6 relative">
+            <li class="relative">
+              <div
+                class="absolute left-[-1.3rem] top-1 w-3 h-3 bg-blue-600 rounded-full"
+              ></div>
+              <h4 class="font-semibold">Step 1: Choose Registration Type</h4>
+              <p class="text-muted-foreground text-sm">
+                Select whether you're registering as a participant or viewer.
+              </p>
+            </li>
+            <li class="relative">
+              <div
+                class="absolute left-[-1.3rem] top-1 w-3 h-3 bg-blue-600 rounded-full"
+              ></div>
+              <h4 class="font-semibold">Step 2: Fill the Form</h4>
+              <p class="text-muted-foreground text-sm">
+                Enter your personal or team information in the form.
+              </p>
+            </li>
+            <li class="relative">
+              <div
+                class="absolute left-[-1.3rem] top-1 w-3 h-3 bg-blue-600 rounded-full"
+              ></div>
+              <h4 class="font-semibold">Step 3: Submit Details</h4>
+              <p class="text-muted-foreground text-sm">
+                Click the button to send your registration directly via email.
+              </p>
+            </li>
+            <li class="relative">
+              <div
+                class="absolute left-[-1.3rem] top-1 w-3 h-3 bg-blue-600 rounded-full"
+              ></div>
+              <h4 class="font-semibold">Step 4: Wait for Confirmation</h4>
+              <p class="text-muted-foreground text-sm">
+                You'll receive a confirmation email and further instructions.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -201,10 +264,7 @@ const handleSubmit = () => {
               </div>
 
               <div class="flex flex-col gap-1.5">
-                <Label
-                  for="team-members"
-                  class="flex justify-between items-center"
-                >
+                <Label class="flex justify-between items-center">
                   <span>Team Members</span>
                   <a
                     href="/team-rules.pdf"
@@ -214,11 +274,41 @@ const handleSubmit = () => {
                     View team rules
                   </a>
                 </Label>
-                <Textarea
-                  id="team-members"
-                  placeholder="List team members separated by commas"
-                  v-model="contactForm.teamMembers"
-                />
+
+                <div
+                  v-for="(member, index) in contactForm.teamMembers"
+                  :key="index"
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center"
+                >
+                  <Input
+                    type="text"
+                    :id="`member-name-${index}`"
+                    placeholder="Full name"
+                    v-model="member.name"
+                  />
+                  <Input
+                    type="email"
+                    :id="`member-email-${index}`"
+                    placeholder="Email"
+                    v-model="member.email"
+                  />
+                  <button
+                    type="button"
+                    @click="removeTeamMember(index)"
+                    class="text-red-600 text-sm hover:underline col-span-2 md:col-span-1"
+                    v-if="contactForm.teamMembers.length > 1"
+                  >
+                    Remove
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  @click="addTeamMember"
+                  class="mt-2 text-blue-600 text-sm hover:underline w-fit"
+                >
+                  + Add team member
+                </button>
               </div>
 
               <div class="flex flex-col gap-1.5">
